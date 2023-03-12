@@ -1,0 +1,55 @@
+Rest stnads for representational state transfer
+it is developed by roy fielding the guy who devleoped Http protocol , naturally we will take the best of http
+
+how http works
+--------------
+
+browser send get request to server and server send server send back response containing html 
+browser looks at the response , takes the html and display it on the screen 
+
+
+filling a form and clicking a submit button :
+---------------------------------------------
+
+in those kind of scenario , browser is sending the post request to the server 
+
+Http defines the header present in request and also body of the request 
+
+in addition to request header and body there are http methods 
+---------------------------
+you can indicate what action by using particular http method 
+
+GET : get
+
+POST : create
+
+PUT : update 
+DELETE : delete 
+
+Http response will also include the http status codes : 
+
+200 : successful / ok 
+
+404 :  page not found 
+
+Rest ful webservice is trying to define services that is already present in http 
+=================================================================================
+
+most important abstraction in rest is resource : 
+----------------------------------------------------
+
+resource is any thing we want to expose to the outside through my application :
+
+
+lets say for todo application  users are the resources :
+
+a specific todo is a resource 
+
+list of todo is also a resource :
+
+/user/suman
+/user/suman/todos
+/user/suman/todos/1
+
+
+
