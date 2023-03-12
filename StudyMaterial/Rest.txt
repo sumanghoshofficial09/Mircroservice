@@ -51,5 +51,33 @@ list of todo is also a resource :
 /user/suman/todos
 /user/suman/todos/1
 
+when we are talking about developing rest ful web services we are always thinking about resources 
+
+what will we do we will assign a uri to the resource 
+
+rest does not worry about you are representing your resources :
+
+it can be on any format , is it html is it xml it json does not matter right 
+
+we can perform the action on the resource using whatever facility is availble in http 
+
+
+Example : 
+
+Create :
+
+POST /users
+
+DELETE a user 
+
+DELTE /users/1
+
+Get all user information 
+
+GET /users
+Get one user : 
+
+GET /users/1
+
 
 
