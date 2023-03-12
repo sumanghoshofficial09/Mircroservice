@@ -90,4 +90,12 @@ service definition is the contract betweeen service provider and service consume
 other key terminilogy is transport :
 ------------------------------------
 
+Transport defines how service is called : if  service is exposed over internet ?
+two popular format : Http and MQ 
+HTTP is over the web : 
+MQ protocol : comunnication over a queue :
+MQ stands for Message Queue protocol :
+
+this protocol is used for asynchronous messaging between applications 
+Software component sends message to queue which is then stored in queue until  it is recieved by recipient 
 
