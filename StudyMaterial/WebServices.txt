@@ -99,3 +99,6 @@ MQ stands for Message Queue protocol :
 this protocol is used for asynchronous messaging between applications 
 Software component sends message to queue which is then stored in queue until  it is recieved by recipient 
 
+Rest defines Architectural approach whereas Soap poses restrictions on the format of the xml which is exchanges between service provider and service consumer 
+
+

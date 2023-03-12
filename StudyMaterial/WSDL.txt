@@ -1,0 +1,67 @@
+in Soap , the service definition is typically done using web service definition language
+WSDL defines endpoint where your service is exposed at 
+it defines all the operations that are exposed 
+also it specifies the request and response structure 
+
+sample wsdl : 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MyService" targetNamespace="http://example.com/myservice/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://example.com/myservice/">
+  
+  <!-- Types section defines the data types used in the service -->
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://example.com/myservice/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="InputRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Param1" type="xsd:string" />
+            <xsd:element name="Param2" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="OutputResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+
+  <!-- PortType section defines the operations available on the service -->
+  <wsdl:message name="InputRequestMessage">
+    <wsdl:part name="InputRequest" element="tns:InputRequest" />
+  </wsdl:message>
+  <wsdl:message name="OutputResponseMessage">
+    <wsdl:part name="OutputResponse" element="tns:OutputResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MyServicePortType">
+    <wsdl:operation name="MyOperation">
+      <wsdl:input message="tns:InputRequestMessage" />
+      <wsdl:output message="tns:OutputResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <!-- Binding section describes the protocol and data format used to communicate with the service -->
+  <wsdl:binding name="MyServiceBinding" type="tns:MyServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MyOperation">
+      <soap:operation soapAction="http://example.com/myservice/MyOperation" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <!-- Service section specifies the endpoint for the service -->
+  <wsdl:service name="MyService">
+    <wsdl:port name="MyServicePort" binding="tns:MyServiceBinding">
+      <soap:address location="http://example.com/myservice/" />
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

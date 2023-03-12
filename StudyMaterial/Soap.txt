@@ -1,0 +1,11 @@
+Soap stands for Simple object standard protocol 
+it defines specific way of building webservice  and soap is more secure than rest , as it is using ws-security framework
+it will send xml request and will get xml response 
+Soap defines specific XML request and response structure 
+
+if you are using soap you have to use this structure 
+We have to create Soap envelop which contain Soap header and Soap body 
+Header contains meta information like authentication authorization also singnatures any thing like that
+Body where you put the actual content your request and response
+soap does not define any restriction on your transport
+
