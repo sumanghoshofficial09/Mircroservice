@@ -1,0 +1,93 @@
+why webservice is required ?
+===========================
+
+lets say I have spring mvc application and some one asked me can  I resuse your business logic
+
+what is the way I can give this component , I can make a jar of it and give it to the person 
+
+it is not feasible 
+
+what will happen if we change some thing in business logic 
+
+we need to recompile and recreate the jar right 
+
+
+what is solution :
+=================
+
+we need webservices :
+
+W3c consortium definitation : 
+-------------------------------------
+
+Software system designed to support the interoperable machine to machine interaction over 
+network .
+
+3keys : 
+
+------------
+it is desinged for application to application interaction : 
+
+it should be interoperable :
+
+
+another application cannot talk to my todo appication 
+
+webservices should be interoperable : any apllication of any code can talk to my webservices 
+==========
+
+
+there are multiple applications written on different languages and frameworks  they can also 
+communicate to my application if it is webservice 
+
+Communication over the network 
+------------------------------  : allows 
+
+
+
+How data exchange between application take place : 
+----------------------------------------------------
+
+our webservices should be platform independent 
+
+the request and response should be platform independent :
+
+two format  : xml 
+another: json : javascript object notation :
+
+
+Q : how the application A knows format of the request and response  
+------------------------------------------------------------------
+
+How does it know what request to send , where to send it and what is the format of the 
+response :
+Solution : ======  to this is 
+
+the service definition :
+
+Every webservice offers a service definitiom :
+
+
+=================================================
+
+Service definition will specify a request response format is it json or xml 
+
+it specifies the structure of the request 
+
+also it specifies structure of the response
+
+it also defines the endpoints like where to call the webservice '
+
+Request ans Response : 
+----------------------
+Message exchange format 
+
+what is service definition 
+--------------------------------
+
+service definition is the contract betweeen service provider and service consumer 
+
+other key terminilogy is transport :
+------------------------------------
+
+
