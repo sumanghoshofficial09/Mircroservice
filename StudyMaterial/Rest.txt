@@ -51,7 +51,9 @@ list of todo is also a resource :
 /user/suman/todos
 /user/suman/todos/1
 
-when we are talking about developing rest ful web services we are always thinking about resources 
+when we are talking about 
+
+developing rest ful web services we are always thinking about resources 
 
 what will we do we will assign a uri to the resource 
 
@@ -80,4 +82,18 @@ Get one user :
 GET /users/1
 
 
+
+important factor about rest : 
+we have to think in term of resources : second thing we have to use the method of http 
+
+get , post , put , delete , patch 
+
+transport is http 
+
+no standard definition attached to it : that is little bit drawback when client want to consume service
+
+it need to know the format of the json structure 
+
+
+we can define the format in swagger 
 
